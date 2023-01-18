@@ -10,8 +10,10 @@ QBCore.Commands.Add(
     function(source, args)
 
         local targetPlayer = QBCore.Functions.GetPlayer(tonumber(args[1]))
+        table.remove(args, 1)
+        local msg = table.concat(args, ' ')
         if targetPlayer then
-            TriggerClientEvent('QBCore:Notify', targetPlayer.PlayerData.source, args[2]) --Change that to the notify function you want to use
+            TriggerClientEvent('QBCore:Notify', targetPlayer.PlayerData.source, msg) --Change that to the notify function you want to use
             TriggerClientEvent('QBCore:Notify', source,
                 Lang:t(
                     "info.notify_send",
