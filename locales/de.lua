@@ -3,6 +3,8 @@ local Translations = {
         ["send_notify"] = "Sende einem Spieler eine Benachrichtigung",
         ["player"] = "ID",
         ["player_desc"] = "Spieler",
+        ["notify_duration"] = "Dauer",
+        ["notify_duration_desc"] = "Dauer die die Benachrichtigung angezeigt werden soll (in Sekunden)",
         ["message"] = "Nachricht",
         ["message_desc"] = "Die Nachricht die du senden willst",
     },

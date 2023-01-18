@@ -3,6 +3,8 @@ local Translations = {
         ["send_notify"] = "Send a player a notification",
         ["player"] = "ID",
         ["player_desc"] = "Player",
+        ["notify_duration"] = "Duration",
+        ["notify_duration_desc"] = "Duration you want the notification to be visible (in seconds)",
         ["message"] = "Message",
         ["message_desc"] = "Message you want to send",
     },

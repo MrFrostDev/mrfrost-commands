@@ -4,6 +4,7 @@ QBCore.Commands.Add(
     Config.CommandNameNotify, Lang:t("desc.send_notify"),
     {
         { name = Lang:t("desc.player"), help = Lang:t("desc.player_desc") },
+        { name = Lang:t("desc.notify_duration"), help = Lang:t("desc.notify_duration_desc") },
         { name = Lang:t("desc.message"), help = Lang:t("desc.message_desc") }
     },
     true,
@@ -11,9 +12,11 @@ QBCore.Commands.Add(
 
         local targetPlayer = QBCore.Functions.GetPlayer(tonumber(args[1]))
         table.remove(args, 1)
+        local duration = tonumber(args[1]) * 1000
+        table.remove(args, 1)
         local msg = table.concat(args, ' ')
         if targetPlayer then
-            TriggerClientEvent('QBCore:Notify', targetPlayer.PlayerData.source, msg) --Change that to the notify function you want to use
+            TriggerClientEvent('QBCore:Notify', targetPlayer.PlayerData.source, msg, 'primary', duration) --Change that to the notify function you want to use
             TriggerClientEvent('QBCore:Notify', source,
                 Lang:t(
                     "info.notify_send",
