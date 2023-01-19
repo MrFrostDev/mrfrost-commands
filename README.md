@@ -4,12 +4,16 @@ MrFrost Commands is a collection of useful commands for your FiveM server that a
 
 ## Available Commands
 
-- `/notify`: Allows players to send a notification to a specific player.
+- `/notify`: Allows players to send a notification to a specific player with a specified duration.
 - Other commands will be added in the future.
 
 ## Usage
 
-`/notify [ID] [message]`
+`/notify [ID] [duration] [message]`
+Where: 
+- ID : is the target player id
+- duration : is duration in seconds the notification will appear on the client.
+- message : is the message that will be sent to the target player
 
 ## Configuration
 
